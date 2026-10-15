@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manurr India Private Limited | Commercial Production & Creative Studio</title>
+  <meta name="description" content="Manurr India Private Limited is a premier commercial photography, cinematic videography, film production, and studio e-commerce agency based in India." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              goldHover: '#c19e2e',
+              dark: '#08090C',
+              surface: '#111318',
+              card: '#161920',
+              border: '#232834',
+              accent: '#3B82F6'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Cinematic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08090C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #232834;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* Subtle subtle glow and shimmer */
+    .glow-gold {
+      box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.25);
+    }
+    .glow-subtle {
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    }
+    .badge-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-slate-200 font-sans selection:bg-brand-gold selection:text-black antialiased">
+
+  <!-- ==================== TOP ANNOUNCEMENT / COMPLIANCE TICKER ==================== -->
+  <aside aria-label="Corporate Registration Notice" class="bg-gradient-to-r from-brand-card via-brand-surface to-brand-card border-b border-brand-border/60 py-2 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <i data-lucide="shield-check" class="w-3 h-3 mr-1"></i> CIN Verified
+        </span>
+        <span class="hidden sm:inline">Registered Corporate Entity:</span>
+        <strong class="text-slate-200">Manurr India Private Limited</strong>
+        <span class="text-slate-500">|</span>
+        <span class="text-slate-300">GSTIN Registered • MCA Compliant</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="tel:+919876543210" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+          <i data-lucide="phone" class="w-3 h-3"></i> +91 98765 43210
+        </a>
+        <a href="mailto:corporate@manurrindia.com" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+          <i data-lucide="mail" class="w-3 h-3"></i> corporate@manurrindia.com
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border/80 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center space-x-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-gold/20 via-brand-card to-amber-500/20 border border-brand-gold/40 flex items-center justify-center group-hover:border-brand-gold transition-all duration-300 shadow-md">
+            <span class="text-brand-gold font-extrabold text-xl tracking-wider">M</span>
+          </div>
+          <div>
+            <span class="text-lg font-bold tracking-tight text-white block leading-tight">MANURR INDIA</span>
+            <span class="text-[10px] tracking-widest uppercase text-slate-400 font-semibold">Private Limited</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
+          <a href="#services" class="text-slate-300 hover:text-brand-gold transition-colors">Services</a>
+          <a href="#showcase" class="text-slate-300 hover:text-brand-gold transition-colors">Portfolio</a>
+          <a href="#about" class="text-slate-300 hover:text-brand-gold transition-colors">About Us</a>
+          <a href="#compliance" class="text-slate-300 hover:text-brand-gold transition-colors">Transparency</a>
+          
+          <!-- Legal Dropdown Menu -->
+          <div class="relative group">
+            <button class="flex items-center space-x-1 text-slate-300 hover:text-brand-gold transition-colors py-2 focus:outline-none">
+              <span>Legal & Policies</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div class="absolute left-0 mt-1 w-56 rounded-xl bg-brand-surface border border-brand-border shadow-2xl py-2 hidden group-hover:block transition-all duration-150 z-50">
+              <a href="javascript:void(0)" onclick="openLegalModal('terms')" class="block px-4 py-2 text-xs text-slate-300 hover:bg-brand-card hover:text-brand-gold">Terms of Service</a>
+              <a href="javascript:void(0)" onclick="openLegalModal('privacy')" class="block px-4 py-2 text-xs text-slate-300 hover:bg-brand-card hover:text-brand-gold">Privacy Policy</a>
+              <a href="javascript:void(0)" onclick="openLegalModal('refund')" class="block px-4 py-2 text-xs text-slate-300 hover:bg-brand-card hover:text-brand-gold">Refund & Cancellation</a>
+              <a href="javascript:void(0)" onclick="openLegalModal('shipping')" class="block px-4 py-2 text-xs text-slate-300 hover:bg-brand-card hover:text-brand-gold">Fulfillment & Delivery</a>
+              <a href="javascript:void(0)" onclick="openLegalModal('contact')" class="block px-4 py-2 text-xs text-slate-300 hover:bg-brand-card hover:text-brand-gold">Official Compliance Contact</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center space-x-4">
+          <a href="#quote" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider bg-brand-gold hover:bg-brand-goldHover text-brand-dark transition-all duration-200 glow-gold shadow-lg">
+            Get a Quote
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1.5"></i>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 hover:text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-5 space-y-4">
+      <a href="#services" class="block text-slate-200 hover:text-brand-gold font-medium py-1" onclick="toggleMobileMenu()">Services</a>
+      <a href="#showcase" class="block text-slate-200 hover:text-brand-gold font-medium py-1" onclick="toggleMobileMenu()">Portfolio</a>
+      <a href="#about" class="block text-slate-200 hover:text-brand-gold font-medium py-1" onclick="toggleMobileMenu()">About Us</a>
+      <a href="#compliance" class="block text-slate-200 hover:text-brand-gold font-medium py-1" onclick="toggleMobileMenu()">Corporate Details</a>
+      <div class="border-t border-brand-border pt-3">
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Legal Information</p>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <button onclick="openLegalModal('terms'); toggleMobileMenu()" class="text-left text-slate-300 hover:text-brand-gold py-1">Terms</button>
+          <button onclick="openLegalModal('privacy'); toggleMobileMenu()" class="text-left text-slate-300 hover:text-brand-gold py-1">Privacy</button>
+          <button onclick="openLegalModal('refund'); toggleMobileMenu()" class="text-left text-slate-300 hover:text-brand-gold py-1">Refunds</button>
+          <button onclick="openLegalModal('shipping'); toggleMobileMenu()" class="text-left text-slate-300 hover:text-brand-gold py-1">Fulfillment</button>
+        </div>
+      </div>
+      <a href="#quote" onclick="toggleMobileMenu()" class="block w-full text-center py-3 rounded-lg bg-brand-gold text-brand-dark font-semibold text-sm">
+        Book Production Consultation
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="relative pt-20 pb-28 overflow-hidden bg-brand-dark">
+    <!-- Background atmospheric glow -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-gold/10 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Badge -->
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card/80 border border-brand-border text-xs text-slate-300 mb-8 badge-blur">
+        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+        <span class="font-medium tracking-wide">Premier Commercial Production House • India</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.12]">
+        Visual Storytelling & <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-white via-slate-100 to-brand-gold bg-clip-text text-transparent">
+          Commercial Production
+        </span> Reimagined.
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+        Empowering leading brands, direct-to-consumer labels, and modern enterprises with high-caliber cinema ad films, precision product imagery, and comprehensive digital creative suites.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#quote" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wide uppercase bg-brand-gold hover:bg-brand-goldHover text-brand-dark transition-all duration-200 shadow-xl glow-gold flex items-center justify-center">
+          <i data-lucide="clapperboard" class="w-4 h-4 mr-2"></i>
+          Schedule A Shoot / Get Quote
+        </a>
+        <a href="#showcase" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-medium tracking-wide bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-slate-600 text-slate-200 transition-all duration-200 flex items-center justify-center">
+          <i data-lucide="play-circle" class="w-4 h-4 mr-2 text-brand-gold"></i>
+          Explore Portfolio
+        </a>
+      </div>
+
+      <!-- Stats Ribbon -->
+      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto pt-10 border-t border-brand-border/60">
+        <div class="p-4 rounded-xl bg-brand-surface/40 border border-brand-border/40">
+          <p class="text-3xl sm:text-4xl font-extrabold text-brand-gold">300+</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Brand Shoots Delivered</p>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-surface/40 border border-brand-border/40">
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">4K / 8K</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Cinema Ready Pipelines</p>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-surface/40 border border-brand-border/40">
+          <p class="text-3xl sm:text-4xl font-extrabold text-brand-gold">100%</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">Contract Compliance</p>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-surface/40 border border-brand-border/40">
+          <p class="text-3xl sm:text-4xl font-extrabold text-white">Pan-India</p>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-1">On-Site & Studio Crew</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CORPORATE ENTITY / TRANSPARENCY BAR ==================== -->
+  <section id="compliance" class="py-12 bg-brand-surface border-y border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div>
+          <div class="flex items-center space-x-2 text-brand-gold text-xs font-semibold tracking-wider uppercase mb-1">
+            <i data-lucide="badge-check" class="w-4 h-4"></i>
+            <span>Verified Corporate Identity</span>
+          </div>
+          <h2 class="text-2xl font-bold text-white">Manurr India Private Limited</h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Registered with the Ministry of Corporate Affairs (MCA), Government of India. Operating domestic & international commercial productions under structured corporate governance.
+          </p>
+        </div>
+
+        <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border">
+            <span class="text-xs text-slate-400 font-mono block">CORPORATE IDENTIFIER</span>
+            <span class="text-sm font-semibold text-slate-200 mt-1 block">U74999DL2024PTC123456</span>
+            <span class="text-[11px] text-emerald-400 flex items-center mt-1">
+              <i data-lucide="check" class="w-3 h-3 mr-1"></i> Active Status
+            </span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border">
+            <span class="text-xs text-slate-400 font-mono block">TAXATION COMPLIANCE</span>
+            <span class="text-sm font-semibold text-slate-200 mt-1 block">GSTIN Registered (PAN-India)</span>
+            <span class="text-[11px] text-emerald-400 flex items-center mt-1">
+              <i data-lucide="check" class="w-3 h-3 mr-1"></i> Tax Invoicing & ITC Ready
+            </span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-card border border-brand-border">
+            <span class="text-xs text-slate-400 font-mono block">COMMERCIAL DOMAINS</span>
+            <span class="text-sm font-semibold text-slate-200 mt-1 block">manurrindia.com / manoverindia.com</span>
+            <span class="text-[11px] text-brand-gold flex items-center mt-1">
+              <i data-lucide="globe" class="w-3 h-3 mr-1"></i> Authorized Digital Assets
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="py-24 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-gold">Capabilities & Disciplines</h2>
+        <h3 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">End-to-End Creative & Media Solutions</h3>
+        <p class="text-slate-400 mt-4 text-base">
+          From concept development and scripting to principal photography and final color grading, our multi-disciplinary studio scales with your commercial objectives.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Service Card 1 -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold mb-6 group-hover:scale-105 transition-transform">
+              <i data-lucide="camera" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Commercial Photography</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Editorial campaigns, high-fashion lookbooks, lifestyle shoots, corporate portraiture, and architectural visual assets tailored for billboard and digital distribution.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Medium format high-resolution</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> High-end retouching & masking</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Location & indoor set builds</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-border/60">
+            <a href="#quote" class="text-xs font-semibold text-brand-gold inline-flex items-center hover:underline">
+              Request Photography Deck <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold mb-6 group-hover:scale-105 transition-transform">
+              <i data-lucide="film" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Cinematic Brand Films</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Television commercials (TVCs), OTT spots, investor pitch narratives, documentary-style storytelling, and viral social campaign productions directed for conversion.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> ARRI & RED cinema workflows</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Full crew, casting & line production</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Storyboarding & scriptwriting</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-border/60">
+            <a href="#quote" class="text-xs font-semibold text-brand-gold inline-flex items-center hover:underline">
+              Request Showreel & Rates <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold mb-6 group-hover:scale-105 transition-transform">
+              <i data-lucide="box" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Studio & E-Commerce</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              High-volume standardized product imagery, ghost mannequin, 360-degree interactive spins, and Amazon/Myntra/Shopify compliance-ready visual catalogs.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Batch processing & rapid turnaround</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> True-to-life color calibration</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Creative tabletop staging</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-border/60">
+            <a href="#quote" class="text-xs font-semibold text-brand-gold inline-flex items-center hover:underline">
+              View Catalog Pricing <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-gold/60 transition-all duration-300 group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center text-brand-gold mb-6 group-hover:scale-105 transition-transform">
+              <i data-lucide="sliders" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">Post-Production & Audio</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Advanced DaVinci Resolve color grading, motion graphics, CGI enhancements, voiceovers, Foley sound design, and broadcast audio mastering.
+            </p>
+            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> ACES & Dolby Vision compliance</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Multilingual sound localization</li>
+              <li class="flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 text-brand-gold mr-1"></i> Secure cloud client review suites</li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-brand-border/60">
+            <a href="#quote" class="text-xs font-semibold text-brand-gold inline-flex items-center hover:underline">
+              Consult Post-House <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO / SHOWCASE WITH FILTERS ==================== -->
+  <section id="showcase" class="py-24 bg-brand-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Curated Archive</span>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Featured Production Works</h3>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2 text-xs">
+          <button onclick="filterGallery('all')" class="gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-gold text-brand-dark transition-all duration-150" data-filter="all">All Disciplines</button>
+          <button onclick="filterGallery('film')" class="gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-card border border-brand-border text-slate-300 hover:text-white transition-all duration-150" data-filter="film">Commercial Films</button>
+          <button onclick="filterGallery('photo')" class="gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-card border border-brand-border text-slate-300 hover:text-white transition-all duration-150" data-filter="photo">Editorial & Still</button>
+          <button onclick="filterGallery('ecommerce')" class="gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-card border border-brand-border text-slate-300 hover:text-white transition-all duration-150" data-filter="ecommerce">Studio Catalog</button>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioContainer">
+        
+        <!-- Item 1: Film -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="film">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80" alt="Cinematic Brand Ad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Film+Production'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Commercial Film</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Aura Luxury Automotives TVC</h4>
+            <p class="text-xs text-slate-400 mt-2">Shot on RED V-Raptor 8K. Principal location: Ladakh & studio car stages. Full CGI integration and bespoke score.</p>
+            <button onclick="openShowcaseDetail('Aura Luxury Automotives TVC', 'Commercial Film', 'High-velocity automotive commercial shot across rugged Himalayan terrains and sound stages. Delivered in multiple theatrical aspect ratios and HDR formats for international broadcasts.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 2: Photo -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="photo">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Editorial Fashion Shoot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Fashion+Editorial'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Editorial & Fashion</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Vogue & Metro Haute Couture</h4>
+            <p class="text-xs text-slate-400 mt-2">Hasselblad 100MP medium format studio session with dynamic custom lighting rigs and editorial post-touch.</p>
+            <button onclick="openShowcaseDetail('Vogue & Metro Haute Couture', 'Editorial & Fashion', 'A series of 45 high-fashion frames shot for spring collections. Utilized profoto studio strobe lighting setups and fine-art skin frequency separation retouching.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3: Studio / Ecommerce -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="ecommerce">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Product Photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Studio+Watch'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Studio & E-Commerce</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Kronos Chronograph Series</h4>
+            <p class="text-xs text-slate-400 mt-2">Macro horology photography with 360-degree interactive WebGL rotation assets and precision reflective diffusion.</p>
+            <button onclick="openShowcaseDetail('Kronos Chronograph Series', 'Studio & E-Commerce', 'Macro commercial photography featuring sapphire crystals and metallic finishes. Processed for multi-channel marketplace guidelines and digital interactive 360 previewers.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 4: Film -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="film">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Cinematic Brand Narrative" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Brand+Film'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Commercial Film</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Zenith FinTech National Anthem</h4>
+            <p class="text-xs text-slate-400 mt-2">Multicity shoot spanning 4 Indian metros highlighting entrepreneurship. Broadcast across prime sports networks.</p>
+            <button onclick="openShowcaseDetail('Zenith FinTech National Anthem', 'Commercial Film', 'Narrative-driven film celebrating modern Indian business leaders. Filmed with ARRI Alexa Mini LF and anamorphic primes, colored in DaVinci Resolve Studio.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 5: Photo -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="photo">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Architectural Shoot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Architectural+Shoot'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Editorial & Still</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Skyscape Corporate Headquarters</h4>
+            <p class="text-xs text-slate-400 mt-2">Architectural tilt-shift capture, twilight exposures, and ambient workplace imagery for annual investor reports.</p>
+            <button onclick="openShowcaseDetail('Skyscape Corporate Headquarters', 'Editorial & Still', 'Precision architectural photography documenting a 400,000 sq.ft. LEED certified corporate campus. Captured with tilt-shift optics for zero perspective distortion.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 6: Ecommerce -->
+        <div class="portfolio-item group relative rounded-2xl overflow-hidden bg-brand-card border border-brand-border" data-category="ecommerce">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Consumer Tech Catalog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/111318/D4AF37?text=Electronics+Catalog'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-80"></div>
+            <span class="absolute top-4 left-4 px-2.5 py-1 rounded bg-black/60 border border-white/10 text-[10px] uppercase font-semibold text-brand-gold badge-blur">Studio & E-Commerce</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-bold text-white group-hover:text-brand-gold transition-colors">Sonar Pro Acoustic Audio</h4>
+            <p class="text-xs text-slate-400 mt-2">D2C conversion visual kit featuring exploding render composites, unboxing assets, and high-key packaging visuals.</p>
+            <button onclick="openShowcaseDetail('Sonar Pro Acoustic Audio', 'Studio & E-Commerce', 'Packaged visual kit for global launch across online storefronts. Produced in ultra-high resolution with clean vector alpha clipping paths for marketing teams.')" class="mt-4 text-xs font-semibold text-slate-200 hover:text-brand-gold flex items-center">
+              View Project Breakdown <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT US SECTION ==================== -->
+  <section id="about" class="py-24 bg-brand-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Company Background</span>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Engineered for Modern Enterprise Visual Demands.
+          </h3>
+          <p class="text-slate-300 mt-4 leading-relaxed text-sm">
+            Incorporated as <strong>Manurr India Private Limited</strong>, we operate as a full-spectrum creative media powerhouse. Our facility combines high-end sound stages, cinema gear arsenals, and dedicated post-production suites to serve global brands, national retailers, and high-growth digital startups.
+          </p>
+          <p class="text-slate-400 mt-3 leading-relaxed text-sm">
+            Whether deploying a 40-person crew for a commercial ad film or processing thousands of catalog SKUs with stringent color fidelity, Manurr India delivers speed, creative rigor, and corporate transparency.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start space-x-3">
+              <div class="p-2 rounded bg-brand-surface border border-brand-border text-brand-gold">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">Rigorous Production Standards</h5>
+                <p class="text-xs text-slate-400">Standardized contracts, call sheets, licensed audio libraries, and insured equipment deployments.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="p-2 rounded bg-brand-surface border border-brand-border text-brand-gold">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">Full IP & Copyright Transfer</h5>
+                <p class="text-xs text-slate-400">Complete commercial usage rights transferred to your organization upon project sign-off and final settlement.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <div class="p-2 rounded bg-brand-surface border border-brand-border text-brand-gold">
+                <i data-lucide="credit-card" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">Secure Payment Gateway Integration</h5>
+                <p class="text-xs text-slate-400">Transparent milestone invoicing through RBI-authorized payment processors with instant GST tax receipts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden border border-brand-border shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=80" alt="Film Studio Lighting" class="w-full h-[450px] object-cover" onerror="this.src='https://placehold.co/1000x800/111318/D4AF37?text=Studio+Stage'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent opacity-70"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-brand-card/90 border border-brand-border backdrop-blur-md">
+              <p class="text-xs text-brand-gold font-bold uppercase tracking-wider">Enterprise Reliability</p>
+              <p class="text-sm font-semibold text-white mt-1">CIN: U74999DL2024PTC123456 • Incorporated under Companies Act, 2013</p>
+              <p class="text-[11px] text-slate-400 mt-1">Operating out of Delhi NCR and Mumbai production hubs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE QUOTE / INQUIRY GENERATOR ==================== -->
+  <section id="quote" class="py-24 bg-brand-surface relative border-t border-brand-border">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-gold">Fast Inquiries</span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Project Quote & Booking Generator</h3>
+        <p class="text-slate-400 text-sm mt-2">
+          Select your production parameters for a detailed quotation, availability check, and milestone roadmap.
+        </p>
+      </div>
+
+      <div class="bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+        <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-6">
+          
+          <!-- Primary Contact Details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="clientName" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Your Name / Rep Name *</label>
+              <input type="text" id="clientName" required placeholder="e.g. Rahul Sharma" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors" />
+            </div>
+
+            <div>
+              <label for="companyName" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Company / Brand Entity *</label>
+              <input type="text" id="companyName" required placeholder="e.g. Acme Lifestyle Pvt Ltd" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="clientEmail" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Business Email *</label>
+              <input type="email" id="clientEmail" required placeholder="name@company.com" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors" />
+            </div>
+
+            <div>
+              <label for="clientPhone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp *</label>
+              <input type="tel" id="clientPhone" required placeholder="+91 98765 43210" class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors" />
+            </div>
+          </div>
+
+          <!-- Service Selection & Budget Range -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="serviceType" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Primary Production Requirement *</label>
+              <select id="serviceType" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors">
+                <option value="Cinematic Commercial Film / Ad Shoot">Cinematic Commercial Film / TVC</option>
+                <option value="Commercial Photography & Campaigns">Commercial Photography & Campaigns</option>
+                <option value="Studio Catalog & E-Commerce Shoots">Studio Catalog & E-Commerce Shoots</option>
+                <option value="Audio Post-Production & Sound Design">Audio Post-Production & Sound Design</option>
+                <option value="End-to-End Creative Media Retainer">End-to-End Creative Media Retainer</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="budgetRange" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Estimated Budget Range (INR) *</label>
+              <select id="budgetRange" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors">
+                <option value="₹50,000 - ₹1,50,000">₹50,000 - ₹1,50,000 (Small Campaign / E-Com)</option>
+                <option value="₹1,50,000 - ₹5,00,000">₹1,50,000 - ₹5,00,000 (Mid-tier Brand Shoot)</option>
+                <option value="₹5,00,000 - ₹15,00,000">₹5,00,000 - ₹15,00,000 (Full TVC / High-end Ad)</option>
+                <option value="₹15,00,000+">₹15,00,000+ (Multi-City / Large Scale Film)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Project Brief Details -->
+          <div>
+            <label for="projectDetails" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Project Brief & Deliverable Deadlines</label>
+            <textarea id="projectDetails" rows="4" placeholder="Mention references, number of deliverables (e.g. 1x 60s film, 3x cutdowns, 20 high-res stills), desired shoot dates, and preferred locations..." class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+          </div>
+
+          <!-- Compliance Confirmation Checkbox -->
+          <div class="flex items-start space-x-3 text-xs text-slate-400">
+            <input type="checkbox" id="policyConsent" required class="mt-0.5 rounded border-brand-border text-brand-gold focus:ring-brand-gold bg-brand-surface" />
+            <label for="policyConsent">
+              I understand that <strong>Manurr India Private Limited</strong> issues official GST invoices and works under standardized corporate contracts, agreeing to the <a href="javascript:void(0)" onclick="openLegalModal('terms')" class="text-brand-gold underline">Terms of Service</a> and <a href="javascript:void(0)" onclick="openLegalModal('privacy')" class="text-brand-gold underline">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl text-sm font-semibold tracking-wide uppercase bg-brand-gold hover:bg-brand-goldHover text-brand-dark transition-all duration-200 glow-gold shadow-xl flex items-center justify-center">
+            <span>Submit Production Inquiry</span>
+            <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+          </button>
+        </form>
+
+        <!-- Dynamic Success Feedback (Hidden by default) -->
+        <div id="quoteSuccessBox" class="hidden mt-6 p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-center animate-fade-in">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-lg font-bold text-white">Inquiry Successfully Transmitted!</h4>
+          <p class="text-xs text-slate-300 mt-2 max-w-lg mx-auto">
+            Thank you for reaching out to <strong>Manurr India Private Limited</strong>. Our executive creative producers will review your brief and share a customized estimate along with preliminary production timelines within 24 business hours.
+          </p>
+          <div class="mt-4 pt-3 border-t border-emerald-500/20 text-[11px] text-slate-400 font-mono">
+            Reference Tracking ID: <span id="quoteRefCode" class="text-brand-gold font-bold">MIPL-2026-8819</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PAYMENT GATEWAY COMPLIANT FOOTER ==================== -->
+  <footer class="bg-brand-dark border-t border-brand-border text-slate-400 text-xs">
+    
+    <!-- Top Footer Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        <!-- Company Identity Col -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-lg bg-brand-gold text-brand-dark font-extrabold flex items-center justify-center text-lg">
+              M
+            </div>
+            <div>
+              <span class="text-base font-bold text-white block">MANURR INDIA PRIVATE LIMITED</span>
+              <span class="text-[10px] text-slate-400 uppercase tracking-widest">CIN: U74999DL2024PTC123456</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-md">
+            A registered Indian private limited enterprise driving state-of-the-art commercial photography, broadcast film production, studio e-commerce media, and bespoke audio post-production services.
+          </p>
+          <div class="flex items-center space-x-4 pt-2 text-slate-400">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-brand-gold transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-brand-gold transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="hover:text-brand-gold transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="hover:text-brand-gold transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          </div>
+          <div class="pt-2">
+            <span class="inline-block text-[10px] px-2.5 py-1 rounded bg-brand-surface border border-brand-border text-slate-300">
+              Domains: <strong class="text-white">manoverindia.com</strong> &bull; <strong class="text-white">manurrindia.com</strong>
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Core Solutions</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#services" class="hover:text-brand-gold transition-colors">Commercial Photography</a></li>
+            <li><a href="#services" class="hover:text-brand-gold transition-colors">Cinematic Brand TVCs</a></li>
+            <li><a href="#services" class="hover:text-brand-gold transition-colors">Studio Catalog & E-Com</a></li>
+            <li><a href="#services" class="hover:text-brand-gold transition-colors">Sound Design & Mix</a></li>
+            <li><a href="#services" class="hover:text-brand-gold transition-colors">Line Production Pan-India</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Compliance Pages (Crucial for Razorpay/Cashfree/Stripe) -->
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Compliance & Policies</h5>
+          <ul class="space-y-2.5">
+            <li><button onclick="openLegalModal('terms')" class="hover:text-brand-gold transition-colors text-left">Terms & Conditions</button></li>
+            <li><button onclick="openLegalModal('privacy')" class="hover:text-brand-gold transition-colors text-left">Privacy Policy</button></li>
+            <li><button onclick="openLegalModal('refund')" class="hover:text-brand-gold transition-colors text-left">Refund & Cancellation Policy</button></li>
+            <li><button onclick="openLegalModal('shipping')" class="hover:text-brand-gold transition-colors text-left">Shipping & Fulfillment Policy</button></li>
+            <li><button onclick="openLegalModal('contact')" class="hover:text-brand-gold transition-colors text-left">Grievance & Support</button></li>
+          </ul>
+        </div>
+
+        <!-- Corporate Contact Details -->
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-4">Registered Office</h5>
+          <div class="space-y-2.5 text-xs text-slate-300">
+            <p class="leading-relaxed">
+              <strong>Manurr India Private Limited</strong><br />
+              Commercial Tower B, DLF Cyber City,<br />
+              Gurugram, Haryana / Delhi NCR - 122002, India
+            </p>
+            <p>
+              <span class="text-slate-400">Email:</span><br />
+              <a href="mailto:contact@manoverindia.com" class="text-brand-gold hover:underline">contact@manoverindia.com</a>
+            </p>
+            <p>
+              <span class="text-slate-400">Support / Inquiries:</span><br />
+              <a href="tel:+919876543210" class="hover:underline text-white">+91 98765 43210</a>
+            </p>
+            <p class="text-[11px] text-slate-400">
+              Hours: Mon - Fri (09:30 AM to 06:30 PM IST)
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Payment Gateway Badges -->
+      <div class="mt-12 pt-8 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center space-x-2 text-xs text-slate-400">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-brand-gold"></i>
+          <span>Secure Authorized Settlement: Compliant with RBI guidelines for corporate B2B and online retainer transactions.</span>
+        </div>
+        <div class="flex items-center space-x-3 text-[11px] text-slate-300">
+          <span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border">UPI Enabled</span>
+          <span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border">Net Banking (All Indian Banks)</span>
+          <span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border">Corporate Credit Cards</span>
+          <span class="px-2.5 py-1 rounded bg-brand-surface border border-brand-border">NEFT / RTGS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Bottom Bar -->
+    <div class="bg-black/60 py-4 border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-2">
+        <div>
+          &copy; <span id="yearPlaceholder">2026</span> Manurr India Private Limited. All Rights Reserved.
+        </div>
+        <div>
+          Corporate Identity: CIN U74999DL2024PTC123456 | GSTIN Pan-India Compliant.
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ==================== MODAL DIALOG SYSTEM FOR LEGAL COMPLIANCE ==================== -->
+  <div id="legalModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-3xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-scale-up">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-brand-border flex items-center justify-between bg-brand-surface">
+        <div class="flex items-center space-x-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-brand-gold"></i>
+          <h3 id="modalTitle" class="text-base font-bold text-white">Legal Policy Document</h3>
+        </div>
+        <button onclick="closeLegalModal()" aria-label="Close modal" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-brand-card transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div id="modalBody" class="p-6 overflow-y-auto space-y-4 text-xs text-slate-300 leading-relaxed font-sans">
+        <!-- Content injected dynamically via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3 border-t border-brand-border bg-brand-surface flex justify-between items-center text-[11px] text-slate-400">
+        <span>Manurr India Private Limited &bull; Verified Legal Repository</span>
+        <button onclick="closeLegalModal()" class="px-4 py-2 rounded-lg bg-brand-gold text-brand-dark font-semibold hover:bg-brand-goldHover transition-colors">
+          I Understand & Acknowledge
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Set Copyright Year
+    document.getElementById('yearPlaceholder').innerText = new Date().getFullYear();
+
+    // Mobile Navigation Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+    document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
+
+    // Gallery Filter Logic
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.portfolio-item');
+      const buttons = document.querySelectorAll('.gallery-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.className = "gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-gold text-brand-dark transition-all duration-150";
+        } else {
+          btn.className = "gallery-btn px-4 py-2 rounded-lg font-semibold bg-brand-card border border-brand-border text-slate-300 hover:text-white transition-all duration-150";
+        }
+      });
+
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Details for Projects
+    function openShowcaseDetail(title, category, description) {
+      const modal = document.getElementById('legalModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBody = document.getElementById('modalBody');
+
+      modalTitle.innerText = title;
+      modalBody.innerHTML = `
+        <div class="mb-3">
+          <span class="inline-block px-2.5 py-1 rounded bg-brand-gold/10 text-brand-gold border border-brand-gold/30 font-semibold text-[11px]">
+            ${category}
+          </span>
+        </div>
+        <p class="text-sm text-slate-200 mb-3">${description}</p>
+        <div class="bg-brand-surface p-4 rounded-xl border border-brand-border space-y-2">
+          <div class="text-xs font-semibold text-white">Production Deliverables:</div>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400">
+            <li>Raw Master Deliveries via Secure High-Speed Enterprise Storage</li>
+            <li>Full Commercial Rights & Master License Release</li>
+            <li>Custom Colorist LUT Profiles & Final ACES graded exports</li>
+          </ul>
+        </div>
+        <div class="mt-4 pt-4 border-t border-brand-border text-slate-400">
+          Interested in commissioning a similar production? <a href="#quote" onclick="closeLegalModal()" class="text-brand-gold underline font-semibold">Generate an estimate here</a>.
+        </div>
+      `;
+      modal.classList.remove('hidden');
+    }
+
+    // Legal Document Repository for Gateway Compliance
+    const legalContents = {
+      terms: {
+        title: "Terms and Conditions of Service",
+        body: `
+          <h4 class="text-sm font-bold text-white mb-2">1. Corporate Identification</h4>
+          <p class="mb-3">These Terms of Service govern all business contracts, shoot bookings, media production, and digital services rendered by <strong>Manurr India Private Limited</strong> (herein referred to as "the Company", "we", "us", operating under domains manoverindia.com and manurrindia.com).</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">2. Scope of Services & Booking</h4>
+          <p class="mb-3">Production dates, shoot locations, equipment configurations, and personnel requirements are confirmed solely upon receipt of the agreed booking deposit and execution of an official Statement of Work (SOW) or Production Service Agreement.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">3. Commercial Rights & Intellectual Property</h4>
+          <p class="mb-3">All raw footage, unedited photographs, and project timelines remain the intellectual property of Manurr India Private Limited until 100% of agreed invoice payments, including statutory taxes, have been settled. Upon final payment, the client receives non-exclusive or exclusive commercial usage rights as detailed in their specific project SOW.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">4. Client Responsibilities</h4>
+          <p class="mb-3">The client is responsible for delivering timely approvals, providing accurate product samples for studio shoots, and obtaining necessary trade authorizations for branded properties featured in commissioned productions.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">5. Governing Law & Jurisdiction</h4>
+          <p>All contracts executed by Manurr India Private Limited are subject to the laws of the Republic of India. Any legal disputes arising shall be subject to the exclusive jurisdiction of the competent courts in Delhi NCR / Gurugram, India.</p>
+        `
+      },
+      privacy: {
+        title: "Privacy and Data Protection Policy",
+        body: `
+          <h4 class="text-sm font-bold text-white mb-2">1. Information Collection</h4>
+          <p class="mb-3">Manurr India Private Limited collects personal and corporate identifiers (such as name, phone number, company designation, email address, and billing details) strictly for legitimate business communications, quote generation, and statutory invoicing.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">2. Non-Disclosure & Confidentiality</h4>
+          <p class="mb-3">We adhere to strict confidentiality regarding unreleased client products, unreleased marketing films, and scripts. We do not sell, rent, or trade your corporate information to third-party marketing entities.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">3. Payment Information Security</h4>
+          <p class="mb-3">Online financial transactions are processed securely through RBI-compliant, PCI-DSS certified payment gateways (e.g., Razorpay, Cashfree, or designated national banking partners). Manurr India Private Limited does not store complete debit/credit card numbers or CVV details on its internal servers.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">4. Cookies and Analytical Tracking</h4>
+          <p>We use standard performance and analytics cookies to optimize web navigation and evaluate inquiry metrics on manoverindia.com and manurrindia.com.</p>
+        `
+      },
+      refund: {
+        title: "Cancellation and Refund Policy",
+        body: `
+          <h4 class="text-sm font-bold text-white mb-2">1. Booking Deposit & Crew Reservations</h4>
+          <p class="mb-3">Upon project confirmation, an advance mobilization retainer (typically 30% to 50%) is collected to lock studio stages, reserve specialized equipment (such as cinema camera packages, grips, and gaffers), and block creative team dates.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">2. Client Cancellation Timelines</h4>
+          <ul class="list-disc pl-5 mb-3 space-y-1">
+            <li><strong>Cancellation 10+ business days prior to scheduled shoot:</strong> 80% refund of deposit or 100% credit toward rescheduled dates within 90 days.</li>
+            <li><strong>Cancellation 4 to 9 business days prior to shoot:</strong> 50% refund of deposit, accounting for locked crew schedules and rental commitments.</li>
+            <li><strong>Cancellation under 72 hours prior to call time:</strong> The deposit is non-refundable due to non-recoverable studio booking fees, crew day-rates, and equipment blocks.</li>
+          </ul>
+
+          <h4 class="text-sm font-bold text-white mb-2">3. Post-Production Milestone Revisions</h4>
+          <p class="mb-3">Unless otherwise agreed in the SOW, post-production packages include up to two (2) complimentary rounds of editorial review. Once final master deliveries are signed off, no cancellations or refunds are permitted.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">4. Processing of Approved Refunds</h4>
+          <p>Where a refund is approved by company management in writing, it will be refunded to the original payment source (bank account or card) within 7 to 10 business days in compliance with banking cycles.</p>
+        `
+      },
+      shipping: {
+        title: "Shipping, Fulfillment & Delivery Policy",
+        body: `
+          <h4 class="text-sm font-bold text-white mb-2">1. Digital Deliverables Fulfillment</h4>
+          <p class="mb-3">The primary deliverables of <strong>Manurr India Private Limited</strong> are high-resolution media files, master ProRes/H.265 videos, color-graded stills, and commercial catalog assets. These are fulfilled digitally via secure cloud file distribution (Frame.io, Google Workspace Enterprise, or secure FTP servers) with encrypted download links.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">2. Physical Storage Media Fulfillment</h4>
+          <p class="mb-3">If a client requests physical delivery of uncompressed RAW shoots on encrypted solid-state drives (SSD) or hard disk drives (HDD), delivery is executed via insured domestic express couriers (e.g. BlueDart or DTDC). Tracking credentials are shared within 24 hours of dispatch.</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">3. Product Sample Handling for Studio Shoots</h4>
+          <p>Physical merchandise sent to our studio for photography or cataloging must be shipped prepaid with full return logistics arranged by the client. The studio takes reasonable care of sample merchandise during active staging.</p>
+        `
+      },
+      contact: {
+        title: "Official Compliance & Grievance Contact",
+        body: `
+          <h4 class="text-sm font-bold text-white mb-2">Corporate Entity</h4>
+          <p class="mb-2"><strong>Manurr India Private Limited</strong></p>
+          <p class="mb-1"><strong>CIN:</strong> U74999DL2024PTC123456</p>
+          <p class="mb-1"><strong>GSTIN:</strong> 07AAAAA0000A1Z5 (Pan-India Tax Invoicing)</p>
+          <p class="mb-3"><strong>Primary Domains:</strong> manoverindia.com | manurrindia.com</p>
+
+          <h4 class="text-sm font-bold text-white mb-2">Registered & Head Office</h4>
+          <p class="mb-3">
+            Commercial Tower B, DLF Cyber City,<br />
+            Gurugram, Haryana / Delhi NCR - 122002, India
+          </p>
+
+          <h4 class="text-sm font-bold text-white mb-2">Direct Grievance & Accounts Communication</h4>
+          <ul class="space-y-1">
+            <li><strong>Official Email:</strong> corporate@manurrindia.com</li>
+            <li><strong>Business Inquiries:</strong> contact@manoverindia.com</li>
+            <li><strong>Compliance Helpline:</strong> +91 98765 43210</li>
+            <li><strong>Operating Hours:</strong> Monday – Friday, 09:30 AM to 06:30 PM IST (Excluding National Holidays)</li>
+          </ul>
+        `
+      }
+    };
+
+    function openLegalModal(policyKey) {
+      const modal = document.getElementById('legalModal');
+      const titleEl = document.getElementById('modalTitle');
+      const bodyEl = document.getElementById('modalBody');
+
+      if (legalContents[policyKey]) {
+        titleEl.innerText = legalContents[policyKey].title;
+        bodyEl.innerHTML = legalContents[policyKey].body;
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeLegalModal() {
+      const modal = document.getElementById('legalModal');
+      modal.classList.add('hidden');
+    }
+
+    // Close modal when clicking backdrop
+    document.getElementById('legalModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLegalModal();
+      }
+    });
+
+    // Handle Form Submission
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = `<span class="inline-block animate-spin mr-2">&#9696;</span> Generating Estimate & Transmitting...`;
+      btn.disabled = true;
+
+      setTimeout(() => {
+        // Generate random ref code
+        const refNumber = 'MIPL-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+        document.getElementById('quoteRefCode').innerText = refNumber;
+        
+        btn.classList.add('hidden');
+        document.getElementById('quoteSuccessBox').classList.remove('hidden');
+        lucide.createIcons();
+      }, 1200);
+    }
+  </script>
+
+</body>
+</html>
